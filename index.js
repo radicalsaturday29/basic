@@ -7,15 +7,15 @@ client.once(Events.ClientReady, c => {
 console.log(`Logged in as ${c.user.username}`);
 
 const ping = new SlashCommandBuilder()
-.setName("ping")
-.setDescription("Replies with pong!");
+.setName("hi")
+.setDescription("Replies with Hello!");
 
 client.application.commands.create(ping);
 });
 
 client.on(Events.InteractionCreate, interaction => {
-if(interaction.commandName === "ping"){
-   interaction.reply("Pong!");
+if(interaction.commandName === "hi"){
+   interaction.reply("Hello!");
 }  
 });
 
